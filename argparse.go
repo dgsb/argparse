@@ -483,7 +483,7 @@ func Store(nArgs int, args []string, value reflect.Value) (err error) {
 // as parameter in the dest field associated with the optional or positional parameter.
 // The named destination field must be a slice type.
 func AppendConst(v interface{}) ActionFunc {
-	return func (nArgs int, args[]string, value reflect.Value) error {
+	return func(nArgs int, args []string, value reflect.Value) error {
 		if value.Kind() != reflect.Slice {
 			return fmt.Errorf("Invalid kind for Append destination: %s", value.Kind().String())
 		}

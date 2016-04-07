@@ -55,7 +55,7 @@ func TestAppendConst(t *testing.T) {
 	parser.Option('c', "cc", "Params", 0, AppendConst("cflag"), "", "Cflag")
 
 	var pargs struct {
-		 Params []string
+		Params []string
 	}
 
 	parse := func(v interface{}, s []string) (err error) {
